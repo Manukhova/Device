@@ -80,6 +80,14 @@ header {
   text-transform: uppercase;
 }
 
+.logo__link:hover {
+  color: #464646;
+}
+
+.logo__link:active {
+  color: #666666;
+}
+
 .menu {
   display: flex;
   justify-content: space-between;
@@ -89,6 +97,46 @@ header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
+}
+
+.search__link input[type="search"] {
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #000000;
+  opacity: 0.3;
+}
+
+.search__link input[type="search"]:hover {
+  opacity: 0.6;
+}
+
+.search__link input[type="search"]:focus {
+  opacity: 1;
+  border-bottom: 2px solid #000000;
+  padding: 13px;
+}
+
+.search__link input[type="search"]:focus .search__btn {
+  display: inline-block;
+}
+
+.search__btn {
+  display: none;
+  background-color: transparent;
+  color: #000000;
+  padding: 15px;
+  border: 2px solid #000000;
+}
+
+.search__btn:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.search__btn:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .user__right {
@@ -125,6 +173,14 @@ header {
   padding-left: 25px;
   display: inline-block;
   vertical-align: top;
+}
+
+.user__right a:hover {
+  opacity: 0.6;
+}
+
+.user__right a:active {
+  opacity: 0.3;
 }
 
 .menu__info {
@@ -229,7 +285,6 @@ header {
   margin: 0 auto;
   width: 1040px;
   top: -108px;
-  left: 60px;
 }
 
 .slide {
@@ -271,8 +326,12 @@ header {
 }
 
 .slide-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   width: 500px;
+  height: 430px;
   padding-top: 80px;
   margin-left: auto;
   font-weight: 300;
@@ -286,6 +345,30 @@ header {
   width: 102px;
   height: 8px;
   background-color: #ffffff;
+}
+
+.slide-text:first-child::after {
+  position: absolute;
+  content: "01";
+  top: 60px;
+  right: 0;
+  width: 170px;
+  height: 120px;
+  color: #ffffff;
+  font-size: 179px;
+  font-family: "Gilroy Extrabold", "Arial", sans-serif;
+}
+
+.slide-text:nth-child(2)::after {
+  position: absolute;
+  content: "02";
+  top: 60px;
+  right: 0;
+  width: 170px;
+  height: 120px;
+  color: #ffffff;
+  font-size: 179px;
+  font-family: "Gilroy Extrabold", "Arial", sans-serif;
 }
 
 .slide-title {
@@ -323,8 +406,6 @@ header {
   position: relative;
   display: block;
   width: 220px;
-  margin-top: 45px;
-  margin-bottom: 75px;
   padding: 5px 0;
   font-weight: 800;
   font-size: 18px;
@@ -346,7 +427,8 @@ header {
   z-index: -1;
 }
 
-.slide .btn:hover {
+.btn:hover,
+ .middle__controls label:hover {
   background-color: #f0c52e;
 }
 
@@ -401,6 +483,7 @@ header {
 }
 
 .catalog__img {
+  position: relative;
   width: 160px;
   height: 160px;
   background-color: #f7e296;
@@ -413,12 +496,21 @@ header {
   background-color: #f0c52e;
 }
 
-.catalog__img:active {
-  background-color: #f0c52e;
+.img1::before {
+  position: absolute;
+  content: "";
+  top: 54px;
+  left: 32px;
+  height: 55px;
+  width: 97px;
+  background-color: transparent;
+  background-image: url(../img/popular1.png);
+  background-repeat: no-repeat;
 }
 
-.img1 {
-  background-image: url(../img/popular1.png);
+.img1:active::before,
+.catalog__item a:active {
+  opacity: 0.3;
 }
 
 .img2 {
@@ -441,7 +533,9 @@ header {
   background-image: url(../img/popular6.png);
 }
 
-.catalog__item b {
+.catalog__item a {
+  text-decoration: none;
+  color: #000000;
   font-family: "Gilroy Extrabold", "Arial", sans-serif;
   font-size: 18px;
 }
@@ -453,9 +547,8 @@ header {
 .middle__wrap {
   display: flex;
   width: 1160px;
+  height: 395px;
   margin: 0 auto;
-  padding-bottom: 70px;
-  box-sizing: border-box;
 }
 
 .middle__title {
@@ -488,14 +581,15 @@ header {
 }
 
 .middle__slider input[type="radio"] {
-  display: ;
+  display: none;;
 }
 
 .middle__controls {
   display: flex;
   flex-direction: column;
+  height: 255px;
   border-right: 9px solid #000000;
-  padding-top: 67px;
+  padding-top: 70px;
   margin-right: 113px;
 }
 
@@ -576,10 +670,24 @@ header {
 }
 
 .info__about {
-  height: 580px;
+  height: 520px;
+  padding-top: 60px;
+  margin-bottom: 88px;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.info__about::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 8px;
+  background-color: #000000;
+
 }
 
 .info__about p {
@@ -689,6 +797,14 @@ footer {
 }
 
 .footer__elem {
+  position: relative;
+}
+
+.footer__elem::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  height: 0;
   width: 80px;
   height: 9px;
   background-color: #f7e184;
