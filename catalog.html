@@ -9,7 +9,7 @@
   <div class="wrapper">
   <header class="catalog__header">
     <div class="logo">
-      <a class="logo__link" href="#">Device</a>
+      <a class="logo__link" href="index.html">Device</a>
     </div>
     <div class="user">
       <div class="user__search">
@@ -82,30 +82,10 @@
       </ul>
     </div>
     </div>
-
-    <div class="search__header">
-
-
-        <h2>Фильтры:</h2>
-            <h2>Сортировка:</h2>
-            <ul class="search__list">
-                <li><a class="active__search" href="#">По цене</a></li>
-                <li><a href="#">По типу</a></li>
-                <li><a href="#">По популярности</a></li>
-            </ul>
-
-        <div class="search__updown">
-          <a href="#"><span class="icon-up-dir"></span></a>
-          <a href="#"><span class="icon-down-dir"></span></a>
-        </div>
-
-    </div>
-
     <div class="catalog__wrapper">
-
       <aside class="filter">
-
-  <form class="login-form" action="http://echo.htmlacademy.ru/" method="post">
+        <h2>Фильтр:</h2>
+     <form class="login-form" action="http://echo.htmlacademy.ru/" method="post">
     <div class="color">
       <h2>Цвет:</h2>
       <input type="checkbox" id="black" name="color" checked>
@@ -128,61 +108,78 @@
     </div>
     <button class="btn" href="#">Показать</button>
   </form>
-
 </aside>
-
 <section class="main__catalog">
-      <div class="articles">
+  <div class="search__header">
+  <div class="search__wrap">
+      <div class="search__left">
+          <h2>Сортировка:</h2>
+          <ul class="search__list">
+              <li><a class="active__search" href="#">По цене</a></li>
+              <li><a href="#">По типу</a></li>
+              <li><a href="#">По популярности</a></li>
+          </ul>
+      </div>
+      <div class="search__updown">
+        <a href="#"><div class="icon-up-dir sort-unactive"></div></a>
+        <a href="#"><div class="icon-down-dir"></div></a>
+      </div>
+    </div>
+  </div>
+  <div class="articles">
     <div class="catalog-row">
-
     <article class="catalog-item">
-
       <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
-
+      <div class="item-wrap">
       <div class="item-link">
       <a href="#">Любительская селфи-палка</a>
       </div>
       <div class="catalog-price">500 руб.</div>
+    </div>
     </article>
     <article class="catalog-item">
-
       <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
-
+        <div class="item-wrap">
       <div class="item-link">
       <a href="#">Профессиональная селфи-палка</a>
       </div>
       <div class="catalog-price">1 500 руб.</div>
+        </div>
     </article>
   </div>
   <div class="catalog-row">
-
   <article class="catalog-item">
-
     <img src="img/item-3.jpg" width="360" height="380" alt="Любительская селфи-палка">
-
+  <div class="item-wrap">
     <div class="item-link">
     <a href="#">Непотопляемая селфи-палка</a>
     </div>
     <div class="catalog-price">2 500 руб.</div>
+  </div>
   </article>
   <article class="catalog-item">
-
     <img src="img/item-4.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
-
+  <div class="item-wrap">
     <div class="item-link">
     <a href="#">Селфи-палка "Следуй за мной"</a>
     </div>
     <div class="catalog-price">4 900 руб.</div>
+  </div>
   </article>
   </div>
-
 </div>
-
+<div class="paginator">
+          <span class="paginator__prev">Назад</span>
+          <div class="numbers">
+          <span class="paginator__present">1</span>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          </div>
+          <a class="paginator__next" href="#">Вперед</a>
+        </div>
 </section>
 </div>
-
   </main>
-
   <footer>
     <div class="user footer__user">
       <div class="footer__logo">
