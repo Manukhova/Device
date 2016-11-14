@@ -86,8 +86,21 @@
       <aside class="filter">
         <h2>Фильтр:</h2>
      <form class="login-form" action="http://echo.htmlacademy.ru/" method="post">
+       <div class="range-filter">
+        <h2>Стоимость</h2>
+        <div class="range-controls">
+           <div class="scale">
+            <div class="bar"></div>
+           </div>
+           <div class="toggle min-toggle"></div>
+           <div class="toggle max-toggle"></div>
+           </div>
+           <div class="price-controls">
+            <input type="text" class="min-price" value="от 0"> <input type="text" class="max-price" value="до 5000">
+          </div>
+        </div>
     <div class="color">
-      <h2>Цвет:</h2>
+      <h2>Цвет</h2>
       <input type="checkbox" id="black" name="color" checked>
       <label for="black">Черный</label>
       <input type="checkbox" id="white" name="color">
@@ -100,7 +113,7 @@
       <label for="pink">Розовый</label>
     </div>
     <div class="bluetooth">
-      <h2>Bluetooth:</h2>
+      <h2>Bluetooth</h2>
       <input type="radio" id="yes" name="bluetooth">
       <label for="yes">Есть</label>
       <input type="radio" id="no" name="bluetooth" checked>
@@ -136,6 +149,10 @@
       </div>
       <div class="catalog-price">500 руб.</div>
     </div>
+    <div class="catalog-modal">
+      <button class="btn" href="#">В корзину</button>
+      <a href="#">Добавить к сравнению</a>
+    </div>
     </article>
     <article class="catalog-item">
       <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
@@ -144,6 +161,10 @@
       <a href="#">Профессиональная селфи-палка</a>
       </div>
       <div class="catalog-price">1 500 руб.</div>
+        </div>
+        <div class="catalog-modal">
+          <button class="btn" href="#">В корзину</button>
+          <a href="#">Добавить к сравнению</a>
         </div>
     </article>
   </div>
@@ -156,6 +177,10 @@
     </div>
     <div class="catalog-price">2 500 руб.</div>
   </div>
+  <div class="catalog-modal">
+    <button class="btn" href="#">В корзину</button>
+    <a href="#">Добавить к сравнению</a>
+  </div>
   </article>
   <article class="catalog-item">
     <img src="img/item-4.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
@@ -164,6 +189,10 @@
     <a href="#">Селфи-палка "Следуй за мной"</a>
     </div>
     <div class="catalog-price">4 900 руб.</div>
+  </div>
+  <div class="catalog-modal">
+    <button class="btn" href="#">В корзину</button>
+    <a href="#">Добавить к сравнению</a>
   </div>
   </article>
   </div>
